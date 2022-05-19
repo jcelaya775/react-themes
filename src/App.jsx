@@ -1,42 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 function App() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(
+    window.localStorage.getItem('theme') || 'light'
+  )
 
   useEffect(() => {
-    const storedTheme = window.localStorage.getItem('theme')
-    document.documentElement.setAttribute('theme', storedTheme)
-  }, [])
-
-  const changeTheme = () => {
-    const value = window.localStorage.setItem('theme', theme)
+    window.localStorage.setItem('theme', theme)
     document.documentElement.setAttribute('theme', theme)
+  }, [theme])
+
+  const handleChange = (event) => {
+    const value = event.value.split(/\s+/).join('').toLowerCase()
+    setTheme(value)
   }
 
   return (
     <>
-      <Navbar />
-      <div className='main'>
-        <label htmlFor='cars'>Choose a Theme:</label>
-        <select
-          name='cars'
-          id='cars'
-          onChange={(event) => {
-            event.preventDefault()
-            console.log(event.target.value)
-            setTheme(event.target.value)
-          }}
-        >
-          <option value='light'>Light</option>
-          <option value='dark'>Dark</option>
-          <option value='modern'>Modern</option>
-          <option value='pastel'>Pastel</option>
-        </select>
-        <button onClick={changeTheme}>Set Theme</button>
+      <Navbar handleChange={handleChange} />
+      <div className='hero'>
+        <div className='container'>
+          <h4>Here is some random text. Pretend it's awesome!!</h4>
+          <button className='btn'>Hover Me</button>
+        </div>
       </div>
-
-      {/* <Footer /> */}
+      <div className='main'>
+        <div className='something'>
+          <p>hey</p>
+          <p>hey</p>
+        </div>
+      </div>
+      <Footer />
     </>
   )
 }
