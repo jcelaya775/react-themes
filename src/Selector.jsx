@@ -3,6 +3,7 @@ import 'react-dropdown/style.css'
 
 const options = [
   'Light',
+  'All-White',
   'Dark',
   'Forest',
   'Modern',
@@ -14,7 +15,7 @@ const options = [
   'Polaroid',
   'Hacker',
 ]
-const defaultOption = options[0]
+const defaultOption = window.localStorage.getItem('theme') || 'light'
 
 function Selector({ handleChange }) {
   return (

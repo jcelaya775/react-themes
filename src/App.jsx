@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
+import image from './images/image.png'
 import Footer from './Footer'
 
 function App() {
@@ -22,14 +23,21 @@ function App() {
       <Navbar handleChange={handleChange} />
       <div className='hero'>
         <div className='container'>
-          <h4>Here is some random text. Pretend it's awesome!!</h4>
+          <h4>Here is some random text. Pretty cool!!</h4>
           <button className='btn'>Hover Me</button>
         </div>
       </div>
       <div className='main'>
-        <div className='something'>
-          <p>hey</p>
-          <p>hey</p>
+        <div className='content'>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+            magni? Nisi reiciendis provident cumque sunt a quia, vero fugit
+            officia! Dicta, sapiente magnam dolorum soluta officia officiis
+            harum iure illum! Incidunt sequi vel, error voluptatum eum
+            voluptatem. Facere, optio deleniti tempora explicabo nobis
+            necessitatibus accusamus quae recusandae qui laudantium sequi?
+          </p>
+          <img src={image} className='img' />
         </div>
       </div>
       <Footer />
