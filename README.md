@@ -1,26 +1,26 @@
 # React Themes
 
-![screenshot](screenshots/light.png)
+![screenshot](screenshots/light.PNG)
 
-![screenshot](screenshots/dark.png)
+![screenshot](screenshots/dark.PNG)
 
-![screenshot](screenshots/olive.png)
+![screenshot](screenshots/olive.PNG)
 
-![screenshot](screenshots/purple-ish.png)
+![screenshot](screenshots/purple-ish.PNG)
 
-![screenshot](screenshots/peach.png)
+![screenshot](screenshots/peach.PNG)
 
-![screenshot](screenshots/tuxedo.png)
+![screenshot](screenshots/tuxedo.PNG)
 
-![screenshot](screenshots/hacker.png)
+![screenshot](screenshots/hacker.PNG)
 
-![screenshot](screenshots/all-white.png)
+![screenshot](screenshots/all-white.PNG)
 
-![screenshot](screenshots/forest.png)
+![screenshot](screenshots/forest.PNG)
 
-![screenshot](screenshots/goldblue.png)
+![screenshot](screenshots/goldblue.PNG)
 
-![screenshot](screenshots/polaroid.png)
+![screenshot](screenshots/polaroid.PNG)
 
 ## Available Scripts
 
