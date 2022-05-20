@@ -28,7 +28,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Installs all dependencies that are necessary to run the app locally.\
+Installs all dependencies that are necessary to run the app locally.
 
 ### `npm start`
 
