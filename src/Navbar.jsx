@@ -8,7 +8,7 @@ function Navbar({ handleChange }) {
       <div className='container'>
         <div className='logo'>
           <Logo />
-          <h2 className='p-10'>React Themes</h2>
+          <h2 className='px-10'>React Themes</h2>
         </div>
         <div className='right'>
           <Selector handleChange={handleChange} />

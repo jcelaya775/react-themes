@@ -9,12 +9,12 @@ function App() {
   )
 
   useEffect(() => {
+    // Apply theme to UI and save
     window.localStorage.setItem('theme', theme)
     document.documentElement.setAttribute('theme', theme)
   }, [theme])
 
-  const handleChange = (event) => {
-    const value = event.value.split(/\s+/).join('').toLowerCase()
+  const handleChange = (value) => {
     setTheme(value)
   }
 
@@ -23,7 +23,7 @@ function App() {
       <Navbar handleChange={handleChange} />
       <div className='hero'>
         <div className='container'>
-          <h4>Here is some random text. Pretty cool!!</h4>
+          <h2 className='py-10'>Welcome to React Themes</h2>
           <button className='btn'>Hover Me</button>
         </div>
       </div>
@@ -35,7 +35,30 @@ function App() {
             officia! Dicta, sapiente magnam dolorum soluta officia officiis
             harum iure illum! Incidunt sequi vel, error voluptatum eum
             voluptatem. Facere, optio deleniti tempora explicabo nobis
-            necessitatibus accusamus quae recusandae qui laudantium sequi?
+            necessitatibus accusamus quae recusandae qui laudantium sequi? Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Atque cupiditate
+            eius deleniti non laboriosam minus magni provident, ex unde ad
+            tenetur fugiat dolorum suscipit inventore! Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Veniam, fugiat!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium asperiores eos a obcaecati suscipit, minus animi
+            doloribus, nobis nam corrupti velit voluptates officia praesentium
+            temporibus adipisci, sequi cupiditate. Ullam eaque aut quasi qui
+            reiciendis dolorum ad perferendis nemo. Fugiat placeat asperiores
+            repellendus fuga doloribus aperiam rerum nam eum voluptatum facilis
+            dolorem magni, dolor hic facere eligendi quo tenetur, ad officiis
+            voluptas maiores laboriosam soluta assumenda? Deserunt minus odio
+            nihil quibusdam velit, aliquam iusto tempora ipsam repellendus quod
+            veniam rem dolorum commodi delectus dignissimos rerum sapiente
+            laboriosam molestiae officia optio earum. Aperiam impedit voluptatem
+            sapiente maiores quibusdam officiis illum dignissimos est. Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Corrupti debitis
+            exercitationem rerum quo eveniet nemo corporis. Est molestiae
+            quisquam laudantium. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Ex aut iste explicabo officia minima, maiores
+            dolorem repellat ab amet tenetur.
           </p>
           <img src={image} className='img' />
         </div>
