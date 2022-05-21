@@ -1,8 +1,7 @@
-import React from 'react'
 import Logo from './Logo'
 import Selector from './Selector'
 
-function Navbar({ handleChange }) {
+function Navbar({ initialTheme, handleChange }) {
   return (
     <div className='navbar'>
       <div className='container'>
@@ -11,7 +10,7 @@ function Navbar({ handleChange }) {
           <h2 className='px-10'>React Themes</h2>
         </div>
         <div className='right'>
-          <Selector handleChange={handleChange} />
+          <Selector initialTheme={initialTheme} handleChange={handleChange} />
         </div>
       </div>
     </div>

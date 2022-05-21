@@ -1,17 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import Navbar from './Navbar'
+import { useState, useEffect } from 'react'
+import Navbar from './components/Navbar'
 import image from './images/image.png'
-import Footer from './Footer'
+import Footer from './components/Footer'
+
+const initialTheme = (() => {
+  const storedTheme = window.localStorage.getItem('theme')
+
+  if (storedTheme)
+    return storedTheme
+  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    return 'dark'
+  else
+    return 'light'
+})()
 
 function App() {
-  const [theme, setTheme] = useState(
-    window.localStorage.getItem('theme') || 'light'
-  )
+  const [theme, setTheme] = useState(initialTheme)
 
+  // Apply theme to UI and save
   useEffect(() => {
-    // Apply theme to UI and save
     window.localStorage.setItem('theme', theme)
-    document.documentElement.setAttribute('theme', theme)
+    document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
 
   const handleChange = (value) => {
@@ -20,7 +29,7 @@ function App() {
 
   return (
     <>
-      <Navbar handleChange={handleChange} />
+      <Navbar initialTheme={initialTheme} handleChange={handleChange} />
       <div className='hero'>
         <div className='container'>
           <h2 className='py-10'>Welcome to React Themes</h2>
@@ -60,7 +69,7 @@ function App() {
             adipisicing elit. Ex aut iste explicabo officia minima, maiores
             dolorem repellat ab amet tenetur.
           </p>
-          <img src={image} className='img' />
+          <img src={image} className='img' alt='beach' />
         </div>
       </div>
       <Footer />
