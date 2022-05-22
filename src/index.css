@@ -46,8 +46,7 @@
   --accent-color: #c2a83e;
 }
 
-:root[data-theme='all-white'] {
-}
+:root[data-theme='all-white'] {}
 
 :root[data-theme='android'] {
   --primary-color: #f61067;
@@ -163,7 +162,7 @@ h6 {
   background: var(--highlight-color);
 }
 
-.navbar > .container {
+.navbar>.container {
   height: 100%;
   max-width: 1080px;
   margin: auto;
@@ -184,14 +183,20 @@ h6 {
   fill: var(--secondary-color, black);
 }
 
-label {
-  color: var(--accent-color);
-  padding: 0 10px;
-  display: inline;
+.hero {
+  height: 400px;
+  background: var(--accent-color);
 }
 
-input {
-  display: inline;
+.hero>.container {
+  max-width: 768px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
@@ -211,21 +216,6 @@ input {
   color: var(--primary-color);
 }
 
-.hero {
-  height: 400px;
-  background: var(--accent-color);
-}
-
-.hero > .container {
-  max-width: 768px;
-  height: 100%;
-  margin: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .main {
   padding: 50px 10px;
@@ -239,7 +229,7 @@ input {
   color: var(--tertiary-color);
 }
 
-.content > p {
+.content>p {
   padding-bottom: 48px;
 }
 
@@ -259,7 +249,7 @@ input {
   color: var(--highlight-color);
 }
 
-.footer > .container {
+.footer>.container {
   max-width: 1080px;
   height: 100%;
   margin: auto;

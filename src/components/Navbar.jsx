@@ -1,5 +1,5 @@
-import Logo from './Logo'
-import Selector from './Selector'
+import Logo from './Logo';
+import Selector from './Selector';
 
 function Navbar({ initialTheme, handleChange }) {
   return (
@@ -9,12 +9,10 @@ function Navbar({ initialTheme, handleChange }) {
           <Logo />
           <h2 className='px-10'>React Themes</h2>
         </div>
-        <div className='right'>
-          <Selector initialTheme={initialTheme} handleChange={handleChange} />
-        </div>
+        <Selector initialTheme={initialTheme} handleChange={handleChange} />
       </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
